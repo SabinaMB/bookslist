@@ -16,6 +16,13 @@ export function Task({ task, onDelete, onComplete }) {
     setEditing(false);
   };
 
+  const handleKeyDown = (e) => {
+    console.log(e.key);
+    if (e.key === 'Enter') {
+      handleSave();
+    }
+  };
+
   return (
     <div className={styles.task}>
       <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>

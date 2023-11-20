@@ -13,10 +13,7 @@ export function Header({ handleAddTask}) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    handleAddTask(title);
-    setTitle('');
-
-      // Check if the title is not empty before adding the task
+         // Check if the title is not empty before adding the task
       if (title.trim() !== '') {
         handleAddTask(title);
         setTitle('');
